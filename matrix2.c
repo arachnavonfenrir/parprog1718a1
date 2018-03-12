@@ -63,7 +63,7 @@ for(int j=0; j<NCOLS; j++){
   // ...your code here...
 
   // print time elapsed and/or Maccesses/sec
-  printf("Time :%d",time,"\n")
+  printf("Time :%f \n",time);
   // ...your code here...  
   
   free(table);
