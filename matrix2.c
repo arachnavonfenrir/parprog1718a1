@@ -40,8 +40,8 @@ double ts,te;//time end, time start
   
   // workload
 
-  for(int i=0 ; i<NCOLS;i++){
-    for(int j=0; j<NROWS; j++){
+  for(int j=0 ; j<NCOLS;j++){
+    for(int i=0; i<NROWS; i++){
       table[j*NROWS+i]+=2;
     }
   }
@@ -49,12 +49,12 @@ double ts,te;//time end, time start
 
   // get ending time
   get_walltime(&te);
-  
-for(int i=0 ; i<NROWS;i++){
-    for(int j=0; j<NCOLS; j++){
-      if(table[j*NROWS+i]!=j*NROWS+i+2){ 
-						printf ( "ERROR\n" );
-					 	return 1;
+ 
+for(int j=0; j<NCOLS; j++){  
+	for(int i=0 ; i<NROWS;i++){
+     	    if(table[j*NROWS+i]!=j*NROWS+i+2){ 
+			printf ( "ERROR\n" );
+			return 1;
 				}
     }
   }
