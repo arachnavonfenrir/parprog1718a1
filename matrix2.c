@@ -40,8 +40,8 @@ double ts,te;//time end, time start
   
   // workload
 
-  for(int i=0 ; i<NROWS;i++){
-    for(int j=0; j<NCOLS; j++){
+  for(int i=0 ; i<NCOLS;i++){
+    for(int j=0; j<NROWS; j++){
       table[j][i]+=2;
     }
   }
