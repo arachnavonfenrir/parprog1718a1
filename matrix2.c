@@ -27,10 +27,10 @@ double ts,te;//time end, time start
 
   // warmup
 
-  
+ for(int j=0; j<NCOLS; j++){ 
   for(int i=0 ; i<NROWS;i++){
-    for(int j=0; j<NCOLS; j++){
-      table[i][j]=i*j+j;
+    
+      table[j*NROWS+i]=j*NROWS+i;
     }
   }
   // ...your code here...
@@ -42,7 +42,7 @@ double ts,te;//time end, time start
 
   for(int i=0 ; i<NCOLS;i++){
     for(int j=0; j<NROWS; j++){
-      table[j][i]+=2;
+      table[j*NROWS+i]+=2;
     }
   }
     
@@ -52,7 +52,7 @@ double ts,te;//time end, time start
   
 for(int i=0 ; i<NROWS;i++){
     for(int j=0; j<NCOLS; j++){
-      if(table[i][j]!=i*j+j+2){ 
+      if(table[j*NROWS+i]!=j*NROWS+i+2){ 
 						printf ( "ERROR\n" );
 					 	return 1;
 				}
@@ -63,7 +63,7 @@ for(int i=0 ; i<NROWS;i++){
   // ...your code here...
 
   // print time elapsed and/or Maccesses/sec
-  printf("Time :%d",time ,"\n")
+  printf("Time :%d",time,"\n")
   // ...your code here...  
   
   free(table);
