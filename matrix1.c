@@ -30,7 +30,7 @@ double ts,te;//time end, time start
   
   for(int i=0 ; i<NROWS;i++){
     for(int j=0; j<NCOLS; j++){
-      table[i*NROW +j]=i*j+j;
+      table[i*NCOLS +j]=i*NCOLS +j;
     }
   }
   // ...your code here...
@@ -42,7 +42,7 @@ double ts,te;//time end, time start
 
   for(int i=0 ; i<NROWS;i++){
     for(int j=0; j<NCOLS; j++){
-      table[i*NROW +j]+=2;
+      table[i*COLS +j]+=2;
     }
   }
     
@@ -51,7 +51,7 @@ double ts,te;//time end, time start
   get_walltime(&te);
 for(int i=0 ; i<NROWS;i++){
     for(int j=0; j<NCOLS; j++){
-      if(table[i*NROW +j]!=i*j+j+2){ 
+      if(table[i*NCOLS +j]!=i*NCOLS +j+2){ 
 			printf ( "ERROR\n" );
 	      return 1;
 				}
