@@ -18,7 +18,7 @@ int main() {
 double *table;
 double ts,te;//time end, time start
 
-
+for(int z=0;z<10;z++){
   table = (double *)malloc(NROWS*NCOLS*sizeof(double)); 
   if (table==NULL) {
     printf("alloc error!\n");
@@ -68,7 +68,7 @@ for(int j=0; j<NCOLS; j++){
   // ...your code here...  
   
   free(table);
-
+}
   return 0;
 }
 
