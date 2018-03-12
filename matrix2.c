@@ -18,7 +18,7 @@ int main() {
 double *table;
 double ts,te;//time end, time start
 
-
+for(int z=0;z<10;z++){
   table = (double *)malloc(NROWS*NCOLS*sizeof(double)); 
   if (table==NULL) {
     printf("alloc error!\n");
@@ -52,7 +52,7 @@ double ts,te;//time end, time start
  
 for(int j=0; j<NCOLS; j++){  
 	for(int i=0 ; i<NROWS;i++){
-     	    if(table[i*NCOLS+j]!=i*NCOLSS+j+2){ 
+     	    if(table[i*NCOLS+j]!=i*NCOLS+j+2){ 
 			printf ( "ERROR\n" );
 			return 1;
 				}
@@ -67,7 +67,7 @@ for(int j=0; j<NCOLS; j++){
   // ...your code here...  
   
   free(table);
-
+}
   return 0;
 }
 
