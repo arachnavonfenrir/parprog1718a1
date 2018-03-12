@@ -53,7 +53,7 @@ for(int j=0; j<NCOLS; j++){
 
  for(int j=0; j<NCOLS; j++){
   for(int i=0 ; i<NROWS;i++){
-     table[j*NROWS +i]!=j*NROWS+i+2){ 
+    if( table[j*NROWS +i]!=j*NROWS+i+2){ 
 			printf ( "ERROR\n" );
 	      return 1;
 				}
@@ -64,7 +64,7 @@ for(int j=0; j<NCOLS; j++){
   // ...your code here...
 
   // print time elapsed and/or Maccesses/sec
-  printf("Time :%d",time ,"\n")
+  printf("Time :%f \n",time);
   // ...your code here...  
   
   free(table);
