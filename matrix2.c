@@ -30,7 +30,7 @@ double ts,te;//time end, time start
  for(int j=0; j<NCOLS; j++){ 
   for(int i=0 ; i<NROWS;i++){
     
-      table[j*NROWS+i]=j*NROWS+i;
+      table[i*NCOLS+j]=i*NCOLS+j;
     }
   }
   // ...your code here...
@@ -42,7 +42,7 @@ double ts,te;//time end, time start
 
   for(int j=0 ; j<NCOLS;j++){
     for(int i=0; i<NROWS; i++){
-      table[j*NROWS+i]+=2;
+      table[i*NCOLS+j]+=2;
     }
   }
     
@@ -52,7 +52,7 @@ double ts,te;//time end, time start
  
 for(int j=0; j<NCOLS; j++){  
 	for(int i=0 ; i<NROWS;i++){
-     	    if(table[j*NROWS+i]!=j*NROWS+i+2){ 
+     	    if(table[i*NCOLS+j]!=i*NCOLSS+j+2){ 
 			printf ( "ERROR\n" );
 			return 1;
 				}
