@@ -16,7 +16,7 @@ void get_walltime(double *wct) {
 
 int main() {
 double *table;
-double ts,te;
+double ts,te;//time end, time start
 
 
   table = (double *)malloc(NROWS*NCOLS*sizeof(double)); 
@@ -27,6 +27,12 @@ double ts,te;
 
   // warmup
 
+  
+  for(int i=0 ; i<NROWS;i++){
+    for(int j=0; j<NCOLS; j++){
+      table[i][j]=i*j+j;
+    }
+  }
   // ...your code here...
 
   // get starting time (double, seconds) 
@@ -34,17 +40,29 @@ double ts,te;
   
   // workload
 
-  // ...your code here...
+  for(int i=0 ; i<NROWS;i++){
+    for(int j=0; j<NCOLS; j++){
+      table[i][j]+=2;
+    }
+  }
+    
 
   // get ending time
   get_walltime(&te);
-
+for(int i=0 ; i<NROWS;i++){
+    for(int j=0; j<NCOLS; j++){
+      if(table[i][j]!=i*j+j+2){ 
+						printf ( "ERROR\n" );
+					 	return 1;
+				}
+    }
+  }
   // check results
-  
+  double time= te-ts;
   // ...your code here...
 
   // print time elapsed and/or Maccesses/sec
-  
+  printf("Time :%d",time ,"\n")
   // ...your code here...  
   
   free(table);
